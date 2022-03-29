@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import unicornbikeImg from './../assets/images/unicornbike.jpg'
 import Grid from '@material-ui/core/Grid'
 import auth from './../auth/auth-helper'
-
+//import FirstPage from './first_page'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -56,18 +56,6 @@ export default function Home({history}){
         { !defaultPage &&
           <Grid container spacing={8}>
             <Grid item xs={12}>
-              <Card className={classes.card}>
-                <Typography variant="h6" className={classes.title}>
-                  Home Page
-                </Typography>
-                <CardMedia className={classes.media} image={unicornbikeImg} title="Unicorn Bicycle"/>
-                <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@boudewijn_huysmans" target="_blank" rel="noopener noreferrer">Boudewijn Huysmans</a> on Unsplash</Typography>
-                <CardContent>
-                  <Typography type="body1" component="p">
-                    Welcome to the MERN Social home page. 
-                  </Typography>
-                </CardContent>
-              </Card>
             </Grid>
           </Grid>
         }

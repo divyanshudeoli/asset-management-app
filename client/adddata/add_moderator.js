@@ -40,17 +40,18 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function AddAssets (){
+export default function AddModerator (){
   const classes = useStyles()
   const [values, setValues] = useState({
     name: '',
     size : '',
     type :'',
-    authority:'',
-    available:false,
+    department:'',
     Id:'',
-    year :1800,
-    maintenane : 0,
+    Number:'',
+    Email:'',
+    Age :18,
+    Location : 0,
     open: false,
     error: ''
   })
@@ -63,14 +64,15 @@ export default function AddAssets (){
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h6" className={classes.title}>
-            Add Asset
+            Add Moderator
           </Typography>
-          <TextField id="authority" label="authority" className={classes.textField} value={values.authority} onChange={handleChange('authority')} margin="normal"/><br/>
+          <TextField id="department" label="department" className={classes.textField} value={values.department} onChange={handleChange('department')} margin="normal"/><br/>
           <TextField id="name" label="Name" className={classes.textField} value={values.name} onChange={handleChange('name')} margin="normal"/><br/>
+          <TextField id="Age" type="number" label="Age" className={classes.textField} value={values.Age} onChange={handleChange('Age')} margin="normal"/><br/>
+          <TextField id="Location" type="number" label="Location" className={classes.textField} value={values.Location} onChange={handleChange('Location')} margin="normal"/><br/>
           <TextField id="Id" label="Id" className={classes.textField} value={values.Id} onChange={handleChange('Id')} margin="normal"/><br/>
-          <TextField id="year" type="number" label="year" className={classes.textField} value={values.year} onChange={handleChange('year')} margin="normal"/><br/>
-          <TextField id="maintenance" type="number" label="maintenance" className={classes.textField} value={values.maintenane} onChange={handleChange('maintenance')} margin="normal"/><br/>
-          <TextField id="availbility" label="availbility" className={classes.textField} value={values.availbility} onChange={handleChange('availbility')} margin="normal"/><br/>
+          <TextField id="Email" type="email" label="Email" className={classes.textField} value={values.Email} onChange={handleChange('Email')} margin="normal"/><br/>
+          <TextField id="Phone" label="Phone" className={classes.textField} value={values.Phone} onChange={handleChange('Phone')} margin="normal"/><br/>
         </CardContent>
         <CardActions>
           <Button color="primary" variant="contained" className={classes.submit}>Submit</Button>
