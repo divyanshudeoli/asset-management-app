@@ -103,7 +103,6 @@ const defaultPhoto = (req, res) => {
 export default {
   create,
   read,
-  list,
   remove,
   update,
   photo,

@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import auth from './../auth/auth-helper'
-//import FirstPage from './first_page'
+import FirstPage from './first_page'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -55,6 +55,7 @@ export default function Home({history}){
         { !defaultPage &&
           <Grid container spacing={8}>
             <Grid item xs={12}>
+                <FirstPage/>
             </Grid>
           </Grid>
         }
@@ -64,7 +65,7 @@ export default function Home({history}){
               
               
               
-              
+
               
               
             </Grid>
